@@ -1,0 +1,14 @@
+<div class="row">
+    <p id="firstP" class="col-md-8 border rounded">List of recruits</p>
+</div>
+<div class="row">
+    <ol class="list-group">
+        <li class="list-group-item" *ngFor="let cand of allHiredCandidates">
+            <div class="row">
+                <img src="{{cand.avatar | noImageAvatar}}" class="col-md-5">
+                <p class="col-md-7">{{cand.firstname}} {{cand.lastname.toUpperCase()}}</p>
+            </div>
+        </li>
+            
+    </ol>
+</div>

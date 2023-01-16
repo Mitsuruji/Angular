@@ -1,0 +1,15 @@
+<div class="container">
+    <input class="row col-md-4" type="text" [(ngModel)]="filterStatus" placeholder="Filtrer les serveurs par status">
+    <ol class="row list-group" >
+        <li  class = "list-group-item" *ngFor="let server of servers | ioServStatus:filterStatus"  [ngClass]="
+            {
+                'list-group-item-success' : server.status == 'stable',    
+                'list-group-item-danger' : server.status == 'critical',    
+                'list-group-item-warning' : server.status == 'offline'    
+            }">
+            <p>{{server.name | shortTxt:20}} | {{server.type}} | {{server.startedDate | date:'long' | uppercase}}
+                <span class="badge bg-secondary">{{server.status}}</span> 
+            </p>
+        </li>
+    </ol>
+</div>

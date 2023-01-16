@@ -1,0 +1,8 @@
+<div class="row border" *ngFor="let account of accountsList; let i = index">
+    <h2>{{account.name}} Account</h2>
+    <hr>
+    <p>This account is {{account.status}}</p>
+    <button class="btn btn-success col-md-2" [hidden]="account.status == 'active'" (click)="setStatus(i, 'active')">Set Account to Active</button>
+    <button class="btn btn-danger col-md-2" [hidden]="account.status == 'inactive'" (click)="setStatus(i, 'inactive')">Set Account to Inactive</button>
+    <button class="btn btn-secondary col-md-2" [hidden]="account.status == 'hidden'" (click)="setStatus(i, 'hidden')">Set Account to Hidden</button>
+</div>

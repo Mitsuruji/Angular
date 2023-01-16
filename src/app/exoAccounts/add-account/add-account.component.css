@@ -1,0 +1,8 @@
+input, select, button {
+    margin-bottom: 0.8rem;
+}
+
+div{
+    padding: 0.8rem;
+    border-color: dimgrey;
+}

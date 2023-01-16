@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <textarea class="" placeholder="Entrer du text" [ngStyle]="wordStyles" rows="3" cols="60"></textarea>
+    </div>
+    <div class="row">
+        <input class="col-md-3" type="text" [(ngModel)]="bgColor" (change)="changeStyles()">
+    
+        <input class="col-md-3" id="scndInput" type="number" #inputSize (keyup)="changeSize(inputSize)" type="number" (change)="changeStyles()">
+    
+        <select class="col-md-3" [(ngModel)]="fontPolice" (change)="changeStyles()">
+            <option value="Verdana">Verdana</option>
+            <option value="Courier" selected>Courier</option>
+            <option value="Ariel">Ariel</option>
+        </select>
+    </div>
+</div>

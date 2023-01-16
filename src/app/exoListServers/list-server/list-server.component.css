@@ -1,0 +1,23 @@
+p{
+    font-weight: bold;
+    margin-bottom: 0;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+li{
+    width: 70%;
+    margin: auto;
+}
+
+ol, input{
+  margin: auto;
+  margin-top: 1rem;  
+}
+
+span{
+  margin-left: 0.2rem;
+}

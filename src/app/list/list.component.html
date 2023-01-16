@@ -1,0 +1,9 @@
+<ol class="list-group" *ngFor="let item of dataJSON; let i = index">
+    
+    <li appDirListHover class="list-group-item" (click)="sendJSON(i);listClick(item)" [ngClass]="{'active': highlightedItem == item}" >
+        <div class="row">
+            <img src="{{item.avatar | noImageAvatar}}" class="col-md-5">
+            <p class="col-md-7">{{item.firstname}} {{item.lastname.toUpperCase()}}</p>
+        </div>
+    </li>
+</ol>

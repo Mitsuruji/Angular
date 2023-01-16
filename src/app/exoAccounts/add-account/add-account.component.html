@@ -1,0 +1,13 @@
+<div class="row border">
+        <input [(ngModel)]="name" type="text" class="col-md-4" placeholder="Enter account name">
+    <div class="row">   
+        <select  [(ngModel)]="status" class="col-md-2">
+            <option value="active">Active Status</option>
+            <option value="inactive">Inactive Status</option>
+            <option value="unknown">Hidden Status</option>
+        </select>
+    </div>
+    <div class="row">   
+        <button class="btn btn-primary col-md-2" (click)="sendAccount()">Add account</button>
+    </div>
+</div>
